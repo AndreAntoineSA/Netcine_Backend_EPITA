@@ -13,7 +13,7 @@ const pusher = new Pusher({
   key: "2b69997430639cdbd8c3",
   secret: "2dc53e01516cfb28de7d",
   cluster: "eu",
-  usetls: true,
+  useTLS: true,
   // encrypted: true
 });
 
@@ -71,6 +71,10 @@ app.get("/sync", (req, res) => {
     if (err) {
       res.status(500).send(err);
     } else {
+
+      data.sort((b,a)=>{
+        return a.timestamp - b.timestamp
+      });
       res.status(200).send(data);
     }
   });

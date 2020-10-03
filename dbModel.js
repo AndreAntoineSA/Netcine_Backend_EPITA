@@ -4,6 +4,7 @@ const instance = mongoose.Schema({
   caption: String,
   user: String,
   image: String,
+  timestamp: String,
   comments: [],
 });
 
