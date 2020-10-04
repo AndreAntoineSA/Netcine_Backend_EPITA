@@ -3,7 +3,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import Pusher from "pusher";
 import dbModel from "./dbModel.js";
-
+//backend
 //app config
 const app = express();
 const port = process.env.PORT || 8080;
@@ -71,9 +71,8 @@ app.get("/sync", (req, res) => {
     if (err) {
       res.status(500).send(err);
     } else {
-
-      data.sort((b,a)=>{
-        return a.timestamp - b.timestamp
+      data.sort((b, a) => {
+        return a.timestamp - b.timestamp;
       });
       res.status(200).send(data);
     }
