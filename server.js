@@ -3,7 +3,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 import Pusher from "pusher";
 import dbModel from "./dbModel.js";
-//backend
+
+//backend for netcine
 //app config
 const app = express();
 const port = process.env.PORT || 8080;
