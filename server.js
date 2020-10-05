@@ -53,7 +53,13 @@ mongoose.connection.once("open", () => {
   });
 });
 //API routes
-app.get("/", (req, res) => res.status(200).send("hello world"));
+app.get("/", (req, res) =>
+  res
+    .status(200)
+    .send(
+      "Netcine backend is online. Goto https://netcine-epita.web.app/ to view the deployed application."
+    )
+);
 
 app.post("/upload", (req, res) => {
   const body = req.body;
